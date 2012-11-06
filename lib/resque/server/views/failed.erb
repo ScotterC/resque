@@ -16,13 +16,13 @@
 <p class='sub'>Showing <%=start%> to <%= start + 20 %> of <b><%= size = Resque::Failure.count %></b> jobs</p>
 
 <ul class='failed'>
-  <%for job in failed%>
+  <% for job in failed %>
     <% index += 1 %>
     <li>
       <dl>
         <% if job.nil? %>
         <dt>Error</dt>
-        <dd>Job <%= index%> could not be parsed; perhaps it contains invalid JSON?</dd>
+        <dd>Job <%= index %> could not be parsed; perhaps it contains invalid JSON?</dd>
         <% else %>
         <dt>Worker</dt>
         <dd>
